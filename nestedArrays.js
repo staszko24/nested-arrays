@@ -3,7 +3,7 @@ const fruits = ['Apple','Lemon',['Banana', 'Mango'],['Strawberry']];
 function findFruit(fruit, array) {
     for (let i = 0; i < array.length; i++) {
         const e = array[i];
-        if (e.includes(fruit)) {
+        if (e.indexOf(fruit) != -1) {
            return `${fruit} is in Fruits.`;
         }   
     }
