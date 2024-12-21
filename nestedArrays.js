@@ -3,9 +3,11 @@ const fruits = ['Apple','Lemon',['Banana', 'Mango'],['Strawberry']];
 function findFruit(fruit, array) {
     for (let i = 0; i < array.length; i++) {
         const e = array[i];
-        if (e.indexOf(fruit) != -1) {
-           return `${fruit} is in Fruits.`;
-        }   
+        if (Array.isArray(e) && e.indexOf(fruit) != -1) {
+           return `${fruit}  is in the Fruits.`;
+        } else if (e === fruit) {
+            return `${fruit} is in the Fruits.`;
+        }
     }
     return `${fruit} is not in the Fruits.`;
 }
